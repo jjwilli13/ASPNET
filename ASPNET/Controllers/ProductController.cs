@@ -46,7 +46,6 @@ namespace ASPNET.Controllers
 
             return View(prod);
 
-            
         }
 
         public IActionResult UpdateProductToDataBase(Product product)
