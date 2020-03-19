@@ -54,6 +54,19 @@ namespace ASPNET
             return product;
 
         }
+
+        public void DeleteProduct(Product product)
+        {
+            _conn.Execute("DELETE FROM reviews WHERE ProductID = @id;",
+                new { id = product.ProductID });
+            _conn.Execute("DELETE FROM sales WHERE ProductID = @id;",
+                new { id = product.ProductID });
+            _conn.Execute("DELETE FROM products WHERE ProductID = @id;",
+                new { id = product.ProductID });
+        }
+        
+
+
       
 
     }
