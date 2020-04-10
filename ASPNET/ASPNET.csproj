@@ -13,4 +13,8 @@
   <ItemGroup>
     <Folder Include="Views\Product\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Home\Begin.cshtml" />
+    <Content Remove="Views\Home\Indexer.cshtml" />
+  </ItemGroup>
 </Project>
